@@ -1,0 +1,31 @@
+.nav {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.li {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-transform: capitalize;
+  letter-spacing: 0.025em;
+}
+
+.li > a {
+  color: rgb(63, 63, 63);
+}
+.li > a::before {
+  content: '⎻';
+  margin-right: 0.5rem;
+}
+.li > a:hover {
+  color: black;
+}

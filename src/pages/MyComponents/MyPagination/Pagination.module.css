@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+.pagination > button {
+  font-size: 1rem;
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.selected,
+.pagination > button:hover {
+  background-color: #ccc;
+}

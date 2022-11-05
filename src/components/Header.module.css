@@ -1,0 +1,21 @@
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  border-bottom: 1.25px solid #aaa;
+  background-color: #fff;
+  padding: 0.5rem 0;
+}
+.ul {
+  display: flex;
+  gap: 1rem;
+}
+.li {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.li > a {
+  padding: 1rem;
+}
