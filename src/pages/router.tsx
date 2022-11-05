@@ -1,4 +1,4 @@
-import { type RouteObject, createBrowserRouter, redirect } from 'react-router-dom';
+import { type RouteObject, createBrowserRouter } from 'react-router-dom';
 import AppLayout from '@/layouts/AppLayout';
 import MyComponents, { myComponentsList } from './MyComponents';
 

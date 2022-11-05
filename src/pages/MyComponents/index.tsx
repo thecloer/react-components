@@ -22,7 +22,7 @@ const MyComponents = () => {
       {myComponentsList.map((myComponent) => (
         <Link key={myComponent.id} to={`/${myComponent.path}`}>
           <div className={styles.card}>
-            <img src={`/components/${myComponent.path}.png`} className={styles.photo} />
+            <img src={`/react-components/components/${myComponent.path}.png`} className={styles.photo} />
             <h3 className={styles.title}>{myComponent.id}</h3>
           </div>
         </Link>
