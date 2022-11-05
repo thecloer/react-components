@@ -1,5 +1,5 @@
 # My React Components
 
-```
-npm run deploy
-```
+My custom react components
+
+https://thecloer.github.io/react-components
