@@ -1,6 +1,5 @@
 import { type RouteObject, createBrowserRouter, redirect } from 'react-router-dom';
 import AppLayout from '@/layouts/AppLayout';
-import ComponentsLayout from '@/layouts/ComponentsLayout';
 import MyComponents, { myComponentsList } from './MyComponents';
 
 const pageObject: RouteObject = {
@@ -9,19 +8,9 @@ const pageObject: RouteObject = {
   children: [
     {
       index: true,
-      loader: async () => redirect('/components'),
+      element: <MyComponents />,
     },
-    {
-      path: 'components',
-      element: <ComponentsLayout />,
-      children: [
-        {
-          index: true,
-          element: <MyComponents />,
-        },
-        ...myComponentsList,
-      ],
-    },
+    ...myComponentsList,
   ],
 };
 

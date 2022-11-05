@@ -20,7 +20,7 @@ const MyComponents = () => {
   return (
     <div className={styles.grid}>
       {myComponentsList.map((myComponent) => (
-        <Link key={myComponent.id} to={`/components/${myComponent.path}`}>
+        <Link key={myComponent.id} to={`/${myComponent.path}`}>
           <div className={styles.card}>
             <img src={`/components/${myComponent.path}.png`} className={styles.photo} />
             <h3 className={styles.title}>{myComponent.id}</h3>

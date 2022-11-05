@@ -4,11 +4,13 @@ import styles from './Sidebar.module.css';
 
 const Sidebar = () => (
   <nav className={styles.nav}>
-    <h1 className={styles.title}>Components</h1>
+    <Link to='/'>
+      <h1 className={styles.title}>Components</h1>
+    </Link>
     <ul className={styles.ul}>
       {myComponentsList.map((myComponent) => (
         <li key={myComponent.id} className={styles.li}>
-          <Link to={`/components/${myComponent.path}`}>{myComponent.id}</Link>
+          <Link to={`/${myComponent.path}`}>{myComponent.id}</Link>
         </li>
       ))}
     </ul>

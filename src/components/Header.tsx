@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 const Header = () => {
   const menus = [
     // { to: '/', title: 'Home' },
-    { to: '/components', title: 'Components' },
+    { to: '/', title: 'Components' },
   ];
   return (
     <header className={styles.header}>
