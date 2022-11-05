@@ -1,4 +1,4 @@
-import type { RouteObject } from 'react-router-dom';
+import { Link, RouteObject } from 'react-router-dom';
 import MyCustomSelect from './MyCustomSelect';
 import MyPagination from './MyPagination';
 import styles from './MyComponents.module.css';
@@ -18,14 +18,14 @@ export const myComponentsList: RouteObject[] = [
 
 const MyComponents = () => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.grid}>
       {myComponentsList.map((myComponent) => (
-        <div key={myComponent.id} className={styles.card}>
-          <div>사진</div>
-          <div>
-            <span>{myComponent.id}</span>
+        <Link key={myComponent.id} to={`/components/${myComponent.path}`}>
+          <div className={styles.card}>
+            <img src={`/components/${myComponent.path}.png`} className={styles.photo} />
+            <h3 className={styles.title}>{myComponent.id}</h3>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
