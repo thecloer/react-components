@@ -13,7 +13,9 @@ function AppLayout() {
             <Sidebar />
           </aside>
           <main className={styles.main}>
-            <Outlet />
+            <div className='send-box'>
+              <Outlet />
+            </div>
           </main>
         </div>
       </div>

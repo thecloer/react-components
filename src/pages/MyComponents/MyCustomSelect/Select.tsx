@@ -20,7 +20,7 @@ type Props = {
   options: SelectOption[];
 } & (SingleSelectProps | MultipleSelectProps);
 
-export const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
+const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -120,3 +120,4 @@ export const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
     </div>
   );
 };
+export default Select;
