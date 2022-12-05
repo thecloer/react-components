@@ -1,7 +1,7 @@
 import Pagination from './Pagination';
 import usePageRouter from './usePageRouter';
 import usePages from './usePages';
-import styles from './Index.module.css';
+import styles from './MyPagination.module.css';
 import { useState } from 'react';
 import { numberInputToInt } from './functions';
 

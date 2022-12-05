@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Select, { type SelectOption } from './Select';
-import styles from './Index.module.css';
+import styles from './MyCustomSelect.module.css';
 
 const options = [
   { label: 'First', value: 1 },

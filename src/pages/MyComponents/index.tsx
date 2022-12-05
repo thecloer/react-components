@@ -1,6 +1,6 @@
 import { Link, RouteObject } from 'react-router-dom';
-import MyCustomSelect from './MyCustomSelect';
-import MyPagination from './MyPagination';
+import MyCustomSelect from './MyCustomSelect/MyCustomSelect';
+import MyPagination from './MyPagination/MyPagination';
 import styles from './MyComponents.module.css';
 
 export const myComponentsList: RouteObject[] = [
@@ -20,7 +20,7 @@ const MyComponents = () => {
   return (
     <div className={styles.grid}>
       {myComponentsList.map((myComponent) => (
-        <Link key={myComponent.id} to={`/${myComponent.path}`}>
+        <Link key={myComponent.path} to={`/${myComponent.path}`}>
           <div className={styles.card}>
             <img src={`/react-components/components/${myComponent.path}.png`} className={styles.photo} />
             <h3 className={styles.title}>{myComponent.id}</h3>
