@@ -1,0 +1,6 @@
+.stack {
+  margin: 0.5rem 0;
+}
+.stack:last-child {
+  margin-bottom: 0;
+}

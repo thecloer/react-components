@@ -1,6 +1,7 @@
 import { Link, RouteObject } from 'react-router-dom';
 import MyCustomSelect from './MyCustomSelect/MyCustomSelect';
 import MyPagination from './MyPagination/MyPagination';
+import MyNestedSidebar from './MyNestedSidebar/MyNestedSidebar';
 import styles from './MyComponents.module.css';
 
 export const myComponentsList: RouteObject[] = [
@@ -13,6 +14,11 @@ export const myComponentsList: RouteObject[] = [
     id: 'custom select',
     path: 'custom-select',
     element: <MyCustomSelect />,
+  },
+  {
+    id: 'nested sidebar',
+    path: 'nested-sidebar',
+    element: <MyNestedSidebar />,
   },
 ];
 
