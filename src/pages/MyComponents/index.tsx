@@ -2,6 +2,7 @@ import { Link, RouteObject } from 'react-router-dom';
 import MyCustomSelect from './MyCustomSelect/MyCustomSelect';
 import MyPagination from './MyPagination/MyPagination';
 import MyNestedSidebar from './MyNestedSidebar/MyNestedSidebar';
+import MyPopupModal from './MyPopupModal/MyPopupModal';
 import styles from './MyComponents.module.css';
 
 export const myComponentsList: RouteObject[] = [
@@ -19,6 +20,11 @@ export const myComponentsList: RouteObject[] = [
     id: 'nested sidebar',
     path: 'nested-sidebar',
     element: <MyNestedSidebar />,
+  },
+  {
+    id: 'popup modal',
+    path: 'popup-modal',
+    element: <MyPopupModal />,
   },
 ];
 
