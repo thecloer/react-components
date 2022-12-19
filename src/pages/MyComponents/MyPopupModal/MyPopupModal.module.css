@@ -1,0 +1,55 @@
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.button {
+  background-color: hsl(200, 100%, 60%);
+  font-size: x-large;
+  font-weight: 700;
+  padding: 0.25em 0.5em;
+  color: white;
+  text-align: center;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: hsl(200, 100%, 50%);
+}
+.popup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup > .modal {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5em;
+  width: 80%;
+  height: 60%;
+  font-size: large;
+}
+.modal > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal > .header > .closeButton {
+  background: none;
+  color: hsl(0, 100%, 50%);
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.25rem;
+}
