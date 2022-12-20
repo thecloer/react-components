@@ -8,7 +8,7 @@ function AppLayout() {
       <Header />
       <div className='container mx-auto grow basis-1 px-12 py-4'>
         <div className='full flex'>
-          <aside className='w-1/3 pr-6'>
+          <aside className='hidden w-1/3 pr-6 sm:block'>
             <Sidebar />
           </aside>
           <main className='h-full grow'>
