@@ -6,7 +6,7 @@ const Header = () => {
     { to: '/', title: 'Components' },
   ];
   return (
-    <header className='center min-h-[5rem] w-screen border-b border-b-slate-300 bg-white py-2 shadow-sm'>
+    <header className='center min-h-[5rem] w-screen border-b border-b-slate-300 bg-white py-2 px-4 shadow-sm'>
       <nav className='container'>
         <ul className='flex gap-4'>
           {menus.map((menu) => (

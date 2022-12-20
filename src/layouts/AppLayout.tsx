@@ -6,7 +6,7 @@ function AppLayout() {
   return (
     <div className='flex min-h-screen flex-col bg-slate-200'>
       <Header />
-      <div className='container mx-auto grow basis-1 px-12 py-4'>
+      <div className='container mx-auto grow basis-1 py-4 px-4'>
         <div className='full flex'>
           <aside className='hidden w-1/3 pr-6 sm:block'>
             <Sidebar />
