@@ -1,16 +1,16 @@
-import { myComponentsList } from '@/pages/MyComponents';
 import { Link } from 'react-router-dom';
+import { myComponentsList } from '@/pages/MyComponents';
 
 const Sidebar = () => (
-  <nav className='w-full h-full flex flex-col'>
+  <nav className='flex h-full w-full flex-col'>
     <Link to='/'>
-      <h1 className='font-bold text-3xl mb-4'>Components</h1>
+      <h1 className='mb-4 text-3xl font-bold'>Components</h1>
     </Link>
-    <ul className='flex flex-col overflow-scroll grow'>
+    <ul className='flex grow flex-col overflow-scroll'>
       {myComponentsList.map((myComponent) => (
         <li
           key={myComponent.id}
-          className='capitalize before:content-["-"] before:mr-2 mb-1 last:mb-0 text-slate-700 hover:text-slate-900'
+          className='mb-1 capitalize text-slate-700 before:mr-2 before:content-["-"] last:mb-0 hover:text-slate-900'
         >
           <Link to={`/${myComponent.path}`}>{myComponent.id}</Link>
         </li>

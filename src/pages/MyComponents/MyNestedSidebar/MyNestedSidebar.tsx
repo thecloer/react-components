@@ -8,7 +8,7 @@ const MyNestedSidebar = () => {
 
   return (
     <div className='card center'>
-      <div className='bg-slate-100 px-4 py-6 rounded-lg'>
+      <div className='rounded-lg bg-slate-100 px-4 py-6'>
         <div className='h-full max-h-96 w-72 overflow-y-scroll'>
           <HashProvider>
             <TocList toc={nestedToc} />

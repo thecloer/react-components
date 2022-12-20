@@ -7,13 +7,13 @@
     @apply full center;
   }
   .card {
-    @apply full bg-white rounded-2xl border border-slate-200 px-6 py-4 shadow-lg;
+    @apply full rounded-2xl border border-slate-200 bg-white px-10 py-8 shadow-lg;
   }
 }
 
 @layer utilities {
   .center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
   .full {
     @apply h-full w-full;

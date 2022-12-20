@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
 type props = {
   pageNum: number;
@@ -13,5 +13,6 @@ const ExamplePage: FC<props> = ({ pageNum }) => {
   );
 };
 
-const usePages = (pageNumber: number) => Array.from({ length: pageNumber }, (_, num) => <ExamplePage pageNum={num + 1} />);
+const usePages = (pageNumber: number) =>
+  Array.from({ length: pageNumber }, (_, num) => <ExamplePage pageNum={num + 1} />);
 export default usePages;

@@ -4,22 +4,22 @@ const MyPopupModal = () => {
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => setShowPopup((prevShowPopup) => !prevShowPopup);
   return (
-    <div className='card center overflow-hidden relative'>
+    <div className='card center relative overflow-hidden'>
       <button
-        className='text-2xl font-bold px-4 py-2 text-white text-center border-2 border-blue-500 shadow-lg rounded-lg bg-blue-400 hover:bg-blue-500'
+        className='rounded-lg border-2 border-blue-500 bg-blue-400 px-4 py-2 text-center text-2xl font-bold text-white shadow-lg hover:bg-blue-500'
         onClick={togglePopup}
       >
         Pop!
       </button>
       {showPopup && (
-        <div className='absolute top-0 left-0 h-full w-full bg-black/50 center' onClick={togglePopup}>
+        <div className='center absolute top-0 left-0 h-full w-full bg-black/50' onClick={togglePopup}>
           <div
-            className='bg-white px-8 py-6 w-4/5 h-3/5 text-lg rounded-lg shadow-lg flex flex-col'
+            className='flex h-3/5 w-4/5 flex-col rounded-lg bg-white px-8 py-6 text-lg shadow-lg'
             onClick={(e) => e.stopPropagation()}
           >
-            <div className='flex justify-between align-center mb-4'>
-              <h1 className='font-bold text-2xl'>Modal</h1>
-              <button className='text-red-500 text-2xl font-bold p-1' onClick={togglePopup}>
+            <div className='align-center mb-4 flex justify-between'>
+              <h1 className='text-2xl font-bold'>Modal</h1>
+              <button className='p-1 text-2xl font-bold text-red-500' onClick={togglePopup}>
                 &times;
               </button>
             </div>

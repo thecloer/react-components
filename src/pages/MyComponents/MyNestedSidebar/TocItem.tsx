@@ -13,7 +13,7 @@ const TocItem: FC<Props> = ({ heading }) => {
 
   return heading.depth === 1 ? (
     <div>
-      <a href={heading.url} className='font-bold text-lg'>
+      <a href={heading.url} className='text-lg font-bold'>
         {heading.value}
       </a>
       <TocList toc={heading.children} />
@@ -27,7 +27,7 @@ const TocItem: FC<Props> = ({ heading }) => {
         onClick={() => setShowChildren((prev) => !prev)}
       >
         <a href={heading.url}>
-          <span className='inline-block w-4 h-4 mr-1 text-center'>{showChildren ? 'v' : '>'}</span>
+          <span className='mr-1 inline-block h-4 w-4 text-center'>{showChildren ? 'v' : '>'}</span>
           {heading.value}
         </a>
       </button>
@@ -36,8 +36,8 @@ const TocItem: FC<Props> = ({ heading }) => {
         <div className='flex'>
           <button
             className={`
-          w-4 mt-2 relative cursor-pointer
-          before:absolute before:top-0 before:bottom-0 before:w-[1px] before:bg-blue-500 transition-colors
+          relative mt-2 w-4 cursor-pointer
+          transition-colors before:absolute before:top-0 before:bottom-0 before:w-[1px] before:bg-blue-500
           hover:before:bg-blue-700
           `}
             onClick={() => setShowChildren(false)}
@@ -53,7 +53,7 @@ const TocItem: FC<Props> = ({ heading }) => {
       }`}
     >
       <a href={heading.url}>
-        <span className='inline-block w-4 h-4 mr-1 text-center'>&bull;</span>
+        <span className='mr-1 inline-block h-4 w-4 text-center'>&bull;</span>
         {heading.value}
       </a>
     </div>

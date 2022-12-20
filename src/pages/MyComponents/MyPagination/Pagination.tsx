@@ -22,7 +22,7 @@ const Pagination: FC<Props> = ({ paginationLength, currentPage, lastPage, action
           key={pageNum}
           onClick={() => action(pageNum - 1)}
           className={`
-          w-8 h-8 rounded-full
+          h-8 w-8 rounded-full
           ${pageNum === currentPage ? 'bg-slate-300' : 'bg-slate-100 hover:bg-slate-200'}`}
         >
           {i === 0 && hasPreviousButton ? '<' : i === paginationLength - 1 && hasNextButton ? '>' : pageNum}

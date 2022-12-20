@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
 
 const Header = () => {
   const menus = [
@@ -7,12 +6,12 @@ const Header = () => {
     { to: '/', title: 'Components' },
   ];
   return (
-    <header className='w-screen center min-h-[5rem] border-b border-b-slate-300 shadow-sm bg-white py-2'>
+    <header className='center min-h-[5rem] w-screen border-b border-b-slate-300 bg-white py-2 shadow-sm'>
       <nav className='container'>
         <ul className='flex gap-4'>
           {menus.map((menu) => (
             <li key={menu.title}>
-              <Link to={menu.to} className='p-4 font-semibold text-lg'>
+              <Link to={menu.to} className='p-4 text-lg font-semibold'>
                 {menu.title}
               </Link>
             </li>

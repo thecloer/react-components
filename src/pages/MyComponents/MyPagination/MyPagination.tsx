@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import Pagination from './Pagination';
 import usePageRouter from './usePageRouter';
 import usePages from './usePages';
-import { useState } from 'react';
 import { numberInputToInt } from './functions';
 
 const initPageNumber = 10;
@@ -27,10 +27,10 @@ const MyPagination = () => {
       </div>
 
       <div className='mt-8 flex justify-evenly'>
-        <div className='flex align-center gap-2'>
+        <div className='align-center flex gap-2'>
           <label htmlFor='page-number'>Page Number:</label>
           <input
-            className='text-center w-16 h-4 px-2 py-3'
+            className='h-4 w-16 px-2 py-3 text-center'
             id='page-number'
             type='number'
             min='1'
@@ -39,10 +39,10 @@ const MyPagination = () => {
             onChange={(e) => setPageNumber(numberInputToInt(e.target, initPageNumber))}
           />
         </div>
-        <div className='flex align-center gap-2'>
+        <div className='align-center flex gap-2'>
           <label htmlFor='pagination-length'>Pagination Length:</label>
           <input
-            className='text-center w-16 h-4 px-2 py-3'
+            className='h-4 w-16 px-2 py-3 text-center'
             id='pagination-length'
             type='number'
             min='3'

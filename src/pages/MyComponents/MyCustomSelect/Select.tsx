@@ -73,24 +73,24 @@ const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
   return (
     <div
       ref={containerRef}
-      className='relative w-80 min-h-[1.5rem] flex items-center gap-2 p-2 rounded border border-slate-500 focus:border-sky-500'
+      className='relative flex min-h-[1.5rem] w-80 items-center gap-2 rounded border border-slate-500 p-2 focus:border-sky-500'
       tabIndex={0}
       onClick={() => setIsOpen((prev) => !prev)}
       onBlur={() => setIsOpen(false)}
     >
-      <span className='grow flex flex-wrap gap-2'>
+      <span className='flex grow flex-wrap gap-2'>
         {multiple
           ? value.map((v) => (
               <button
                 key={v.value}
-                className='items-center flex gap-1 border border-slate-500 rounded px-1 text-sm hover:bg-red-200 hover:border-red-500 focus::bg-red-200 focus::border-red-500 group'
+                className='focus::bg-red-200 focus::border-red-500 group flex items-center gap-1 rounded border border-slate-500 px-1 text-sm hover:border-red-500 hover:bg-red-200'
                 onClick={(e) => {
                   e.stopPropagation();
                   selectOption(v);
                 }}
               >
                 {v.label}
-                <span className='group-hover:text-red-500 group-focus:text-red-500 text-slate-500 text-lg'>
+                <span className='text-lg text-slate-500 group-hover:text-red-500 group-focus:text-red-500'>
                   &times;
                 </span>
               </button>
@@ -98,7 +98,7 @@ const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
           : value?.label}
       </span>
       <button
-        className='text-slate-500 text-lg hover:text-red-500 focus:text-red-500'
+        className='text-lg text-slate-500 hover:text-red-500 focus:text-red-500'
         onClick={(e) => {
           e.stopPropagation();
           clearOptions();
@@ -106,10 +106,10 @@ const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
       >
         &times;
       </button>
-      <div className='w-[1px] bg-slate-700 self-stretch'></div>
-      <div className='border-t-slate-700 border-[0.25rem] border-transparent translate-y-1/4'></div>
+      <div className='w-[1px] self-stretch bg-slate-700'></div>
+      <div className='translate-y-1/4 border-[0.25rem] border-transparent border-t-slate-700'></div>
       <ul
-        className={`absolute max-h-60 overflow-y-auto border border-slate-700 rounded w-full left-0 top-full z-10 bg-white ${
+        className={`absolute left-0 top-full z-10 max-h-60 w-full overflow-y-auto rounded border border-slate-700 bg-white ${
           isOpen ? 'block' : 'hidden'
         }`}
       >

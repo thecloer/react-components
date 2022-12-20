@@ -4,14 +4,14 @@ import Sidebar from '@/components/Sidebar';
 
 function AppLayout() {
   return (
-    <div className='min-h-screen flex flex-col bg-slate-200'>
+    <div className='flex min-h-screen flex-col bg-slate-200'>
       <Header />
-      <div className='container grow mx-auto px-12 py-4 basis-1'>
+      <div className='container mx-auto grow basis-1 px-12 py-4'>
         <div className='full flex'>
-          <aside className='max-w-xs min-w-fit w-1/3 pr-6'>
+          <aside className='w-1/3 pr-6'>
             <Sidebar />
           </aside>
-          <main className='grow h-full'>
+          <main className='h-full grow'>
             <div className='send-box'>
               <Outlet />
             </div>
