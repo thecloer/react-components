@@ -26,11 +26,11 @@ export const myComponentsList: RouteObject[] = [
     path: 'popup-modal',
     element: <MyPopupModal />,
   },
-  // {
-  //   id: 'skeleton',
-  //   path: 'skeleton',
-  //   element: <MySkeleton />,
-  // },
+  {
+    id: 'skeleton',
+    path: 'skeleton',
+    element: <MySkeleton />,
+  },
 ];
 
 const MyComponents = () => {
