@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 import type { Toc } from './functions';
 import TocItem from './TocItem';
-import styles from './TocList.module.css';
 
 type Props = {
   toc: Toc;
@@ -9,7 +8,7 @@ type Props = {
 
 const TocList: FC<Props> = ({ toc }) => {
   return (
-    <div className={styles.stack}>
+    <div className='my-2 last:mb-0'>
       {toc.map((heading) => (
         <TocItem key={heading.url} heading={heading} />
       ))}

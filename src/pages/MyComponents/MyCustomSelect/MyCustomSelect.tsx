@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Select, { type SelectOption } from './Select';
-import styles from './MyCustomSelect.module.css';
 
 const options = [
   { label: 'First', value: 1 },
@@ -14,7 +13,7 @@ const MyCustomSelect = () => {
   const [value1, setValue1] = useState<SelectOption[]>([options[0]]);
   const [value2, setValue2] = useState<SelectOption | undefined>(options[0]);
   return (
-    <div className={`card ${styles.box}`}>
+    <div className='card center gap-12 flex-col'>
       <Select multiple options={options} value={value1} onChange={(o) => setValue1(o)} />
       <Select options={options} value={value2} onChange={(o) => setValue2(o)} />
     </div>

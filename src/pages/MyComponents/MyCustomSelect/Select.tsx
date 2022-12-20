@@ -1,5 +1,4 @@
 import { FC, useEffect, useRef, useState } from 'react';
-import styles from './select.module.css';
 
 export type SelectOption = {
   label: string;
@@ -72,26 +71,34 @@ const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
   }, [isOpen, highlightedIndex, options]);
 
   return (
-    <div ref={containerRef} className={styles.container} tabIndex={0} onClick={() => setIsOpen((prev) => !prev)} onBlur={() => setIsOpen(false)}>
-      <span className={styles.value}>
+    <div
+      ref={containerRef}
+      className='relative w-80 min-h-[1.5rem] flex items-center gap-2 p-2 rounded border border-slate-500 focus:border-sky-500'
+      tabIndex={0}
+      onClick={() => setIsOpen((prev) => !prev)}
+      onBlur={() => setIsOpen(false)}
+    >
+      <span className='grow flex flex-wrap gap-2'>
         {multiple
           ? value.map((v) => (
               <button
                 key={v.value}
-                className={styles['option-badge']}
+                className='items-center flex gap-1 border border-slate-500 rounded px-1 text-sm hover:bg-red-200 hover:border-red-500 focus::bg-red-200 focus::border-red-500 group'
                 onClick={(e) => {
                   e.stopPropagation();
                   selectOption(v);
                 }}
               >
                 {v.label}
-                <span className={styles['remove-button']}>&times;</span>
+                <span className='group-hover:text-red-500 group-focus:text-red-500 text-slate-500 text-lg'>
+                  &times;
+                </span>
               </button>
             ))
           : value?.label}
       </span>
       <button
-        className={styles['clear-button']}
+        className='text-slate-500 text-lg hover:text-red-500 focus:text-red-500'
         onClick={(e) => {
           e.stopPropagation();
           clearOptions();
@@ -99,13 +106,19 @@ const Select: FC<Props> = ({ multiple, value, onChange, options }) => {
       >
         &times;
       </button>
-      <div className={styles.divider}></div>
-      <div className={styles.caret}></div>
-      <ul className={`${styles.options} ${isOpen ? styles.show : ''}`}>
+      <div className='w-[1px] bg-slate-700 self-stretch'></div>
+      <div className='border-t-slate-700 border-[0.25rem] border-transparent translate-y-1/4'></div>
+      <ul
+        className={`absolute max-h-60 overflow-y-auto border border-slate-700 rounded w-full left-0 top-full z-10 bg-white ${
+          isOpen ? 'block' : 'hidden'
+        }`}
+      >
         {options.map((option, index) => (
           <li
             key={option.value}
-            className={`${styles.option} ${isOptionSelected(option) ? styles.selected : ''} ${index === highlightedIndex ? styles.highlighted : ''}`}
+            className={`cursor-pointer py-1 px-2  ${
+              index === highlightedIndex ? 'bg-sky-500 text-white' : isOptionSelected(option) ? 'bg-sky-300' : ''
+            }`}
             onClick={(e) => {
               e.stopPropagation();
               selectOption(option);

@@ -3,7 +3,7 @@ import MyCustomSelect from './MyCustomSelect/MyCustomSelect';
 import MyPagination from './MyPagination/MyPagination';
 import MyNestedSidebar from './MyNestedSidebar/MyNestedSidebar';
 import MyPopupModal from './MyPopupModal/MyPopupModal';
-import styles from './MyComponents.module.css';
+import MySkeleton from './MySkeleton/MySkeleton';
 
 export const myComponentsList: RouteObject[] = [
   {
@@ -26,16 +26,21 @@ export const myComponentsList: RouteObject[] = [
     path: 'popup-modal',
     element: <MyPopupModal />,
   },
+  {
+    id: 'skeleton',
+    path: 'skeleton',
+    element: <MySkeleton />,
+  },
 ];
 
 const MyComponents = () => {
   return (
-    <div className={styles.grid}>
+    <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
       {myComponentsList.map((myComponent) => (
         <Link key={myComponent.path} to={`/${myComponent.path}`}>
-          <div className={styles.card}>
-            <img src={`/react-components/components/${myComponent.path}.png`} className={styles.photo} />
-            <h3 className={styles.title}>{myComponent.id}</h3>
+          <div className='card'>
+            <img src={`/react-components/components/${myComponent.path}.png`} className='w-full aspect-[1.3]' />
+            <h3 className='text-center text-lg font-medium'>{myComponent.id}</h3>
           </div>
         </Link>
       ))}

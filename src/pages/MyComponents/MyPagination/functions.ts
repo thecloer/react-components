@@ -8,7 +8,13 @@ export const numberInputToInt = (target: EventTarget & HTMLInputElement, init: n
   const min = stringToInt(target.min);
   const max = stringToInt(target.max);
   const int = stringToInt(target.value, init);
-  return min === undefined ? (max === undefined ? int : Math.min(int, max)) : max === undefined ? Math.max(int, min) : Math.max(min, Math.min(max, int));
+  return min === undefined
+    ? max === undefined
+      ? int
+      : Math.min(int, max)
+    : max === undefined
+    ? Math.max(int, min)
+    : Math.max(min, Math.min(max, int));
 };
 
 interface RangeFunction {
@@ -26,14 +32,17 @@ interface RangeFunction {
  */
 const range: RangeFunction = (start: number, end: number, length?: number) =>
   end > start && (length === undefined || length > 0)
-    ? Array.from({ length: length === undefined ? end - start + 1 : Math.min(length, end - start + 1) }, (_, i) => start + i)
+    ? Array.from(
+        { length: length === undefined ? end - start + 1 : Math.min(length, end - start + 1) },
+        (_, i) => start + i
+      )
     : [];
 
 export const getPaginationNumbers = (currentPage: number, lastPage: number, paginationLength: number) => {
   if (lastPage <= paginationLength)
     return {
       paginationNumbers: range(1, lastPage),
-      hasPriviousButton: false,
+      hasPreviousButton: false,
       hasNextButton: false,
     };
 

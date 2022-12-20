@@ -7,12 +7,14 @@ const Header = () => {
     { to: '/', title: 'Components' },
   ];
   return (
-    <header className={styles.header}>
+    <header className='w-screen center min-h-[5rem] border-b border-b-slate-300 shadow-sm bg-white py-2'>
       <nav className='container'>
-        <ul className={styles.ul}>
+        <ul className='flex gap-4'>
           {menus.map((menu) => (
-            <li key={menu.title} className={styles.li}>
-              <Link to={menu.to}>{menu.title}</Link>
+            <li key={menu.title}>
+              <Link to={menu.to} className='p-4 font-semibold text-lg'>
+                {menu.title}
+              </Link>
             </li>
           ))}
         </ul>
