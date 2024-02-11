@@ -4,6 +4,7 @@ import MyPagination from './MyPagination/MyPagination';
 import MyNestedSidebar from './MyNestedSidebar/MyNestedSidebar';
 import MyPopupModal from './MyPopupModal/MyPopupModal';
 import MySkeleton from './MySkeleton/MySkeleton';
+import MyBookingCalendar from './MyBookingCalendar/MyBookingCalendar';
 
 export const myComponentsList: RouteObject[] = [
   {
@@ -30,6 +31,11 @@ export const myComponentsList: RouteObject[] = [
     id: 'skeleton',
     path: 'skeleton',
     element: <MySkeleton />,
+  },
+  {
+    id: 'booking calendar',
+    path: 'booking-calendar',
+    element: <MyBookingCalendar />,
   },
 ];
 
