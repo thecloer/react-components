@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/react-components/',
+  base: 'http://react-components.thecloer.com/',
   resolve: {
     alias: { '@': path.resolve('./src') },
   },

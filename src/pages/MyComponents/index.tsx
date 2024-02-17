@@ -45,7 +45,7 @@ const MyComponents = () => {
       {myComponentsList.map((myComponent) => (
         <Link key={myComponent.path} to={`/${myComponent.path}`}>
           <div className='card'>
-            <img src={`/react-components/components/${myComponent.path}.png`} className='aspect-[1.3] w-full' />
+            <img src={`/components/${myComponent.path}.png`} className='aspect-[1.3] w-full' />
             <h3 className='text-center text-lg font-medium'>{myComponent.id}</h3>
           </div>
         </Link>

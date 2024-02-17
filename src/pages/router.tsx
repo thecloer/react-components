@@ -14,6 +14,4 @@ const pageObject: RouteObject = {
   ],
 };
 
-export default createBrowserRouter([pageObject], {
-  basename: '/react-components',
-});
+export default createBrowserRouter([pageObject]);
