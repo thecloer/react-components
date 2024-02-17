@@ -12,7 +12,7 @@ function CalendarDate({ date, selectStatus, onClick }: Props) {
       return <div className='flex aspect-square w-full items-center justify-center' />;
 
     case SELECT_STATUS.UNSELECTABLE:
-      return <div className='flex aspect-square w-full items-center justify-center'>{date.getDate()}</div>;
+      return <div className='flex aspect-square w-full items-center justify-center text-zinc-400'>{date.getDate()}</div>;
 
     case SELECT_STATUS.HOST_SELECTABLE:
       return (
@@ -30,7 +30,7 @@ function CalendarDate({ date, selectStatus, onClick }: Props) {
       return (
         <div className='flex aspect-square w-full items-center justify-center'>
           <div
-            className='flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-zinc-200 hover:bg-indigo-300'
+            className='flex h-6 w-6 cursor-pointer items-center justify-center rounded-full hover:bg-indigo-300'
             onClick={onClick}
           >
             {date.getDate()}
